@@ -4,11 +4,11 @@ from random import randint
 headers = {
     'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 9; MI 6 MIUI/20.6.18)'
 }
- 
+#在下方输入账号密码
 user = ''
 password = ''
-# step = ''
-step = str(randint(10121, 12302))
+#在下方输入步数范围
+step = str(randint(10000, 12000))
  
 def get_code(location):
     code_pattern = re.compile("(?<=access=).*?(?=&)")
@@ -94,7 +94,7 @@ def main():
     return result
  
 def get_time():
-    url = 'http://api.m.taobao.com/rest/api3.do?api=mtop.common.getTimestamp'
+    url = 'https://acs.m.taobao.com/gw/mtop.common.getTimestamp/'
     response = requests.get(url, headers=headers).json()
     t = response['data']['t']
     return t
