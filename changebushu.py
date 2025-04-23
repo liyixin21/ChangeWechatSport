@@ -7,7 +7,7 @@ headers = {
 #在下方输入账号密码
 user = ''
 password = ''
-#在下方输入步数范围
+#在下方输入步数范围，(10000, 12000)对应(step_min,step_max)
 step = str(randint(10000, 12000))
  
 def get_code(location):
